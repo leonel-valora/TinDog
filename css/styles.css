@@ -64,6 +64,7 @@ font-weight: lighter;
 /* Buttons */
 .download-button{
     margin: 5% 3% 5% 0;
+    box-sizing: border-box;
 }
 
 /* Title Section */
@@ -76,12 +77,14 @@ font-weight: lighter;
     padding: 3% 15% 7%;
 }
 .title-image{
-    width: 60%;
+    width: 300px;
     rotate: 25deg;
     position: absolute;
     right: 30%;
 }
-
+#hero-text {
+  z-index: 2;
+}
 /* Features Section */
 #features{
     position: relative;
@@ -148,3 +151,51 @@ color: #ff4c68;
   .social-icon {
     margin: 20px 10px;
   }
+@media (max-width: 768px) {
+  .title-image{
+    width: 100%;
+  }
+  .big-heading, .testimonial-text, .section-heading {
+    font-size: 2.5rem;
+  }
+  .big-heading {
+    text-align: left;
+  }
+}
+
+@media (max-width: 576px) {
+  #title .container-fluid {
+    padding: 3% 7%;
+  }
+  .container-fluid, #pricing {
+    padding: 10% 7%;
+  }
+  .navbar {
+    padding: 0 0 2rem;
+  }
+  #hero-text {
+    text-align: center;
+  }
+  .title-image{
+    position: relative;
+    width: 60%;
+    height: 100%;
+    right: 0;
+    rotate: 0deg;
+  }
+  .big-heading {
+    text-align: center;
+  }
+  .big-heading, .testimonial-text, .section-heading {
+    font-size: 2rem;
+  }
+  .testimonial-text {
+    padding: 1rem;
+  }
+  .press-logo {
+    width: 20%;
+  }
+  .btn-lg {
+    font-size: 1rem;
+  }
+}
